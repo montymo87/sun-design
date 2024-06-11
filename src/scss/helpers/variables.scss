@@ -1,12 +1,19 @@
 //---------------------------------------------fonts
 $font_path: '../fonts/';
-$font_1: 'RobotoCondensed', sans-serif;
+$font_1: 'Montserrat', sans-serif;
+$font_2: 'Italiana', sans-serif;
 $font_size_base: 1.6rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
 $black: #000;
+$green: #69ae96;
+$dark: #1f1f1f;
+$dark_2: #8f8f8f;
+$bg: #f5f9fa;
+$bg_2: #f5fcf8;
+$bg_3: #fcf8f5;
 
 $color_text_base: $black;
 $color_link_base: #4aa3df;
@@ -22,7 +29,8 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 96rem;
+$page_width: 117rem;
+$page_width_2: 180rem;
 
 //---------------------------------------------layout###
 
