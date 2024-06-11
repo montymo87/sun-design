@@ -1,0 +1,29 @@
+section.section.clients.js-clients-wrapper
+	.clients__in
+		.clients__heading
+			h2.clients__title What My #[strong Clients Say]
+			.clients__slider_nav
+				button.slider_navigation.slider_navigation--prev_mod.js-slider-navigation-prev(class=buttonMod type="button" aria-label="Prev slide")
+					+icon('arrow', 'icon--size_mod icon--slider')
+				button.slider_navigation.slider_navigation--next_mod.js-slider-navigation-next(class=buttonMod type="button" aria-label="Next slide")
+					+icon('arrow', 'icon--size_mod icon--slider')
+
+		.clients__slider_w
+			.clients__list.js-clients-slider(role='slider')
+				+loop_while(3)
+					.clients__item
+						.clients__row
+							.clients__col.clients__col--img
+								+picture({
+									img: `slider.jpg`,
+									class: 'clients__img_w',
+									img_class: 'clients__img',
+									alt: 'some image',
+								})
+							.clients__col.clients__col--info
+								.clients__descr “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing diam, tortor, egestas euismod neque venenatis, viverra. Ante nibh morbi egestas quam lorem ipsum. Eget sit praesent a laoreet. Mi, phasellus quis mauris sollicitudin non. Iaculis ac duis mauris enim. “
+								.clients__name= `Frank Hardy ${i - 1 || ''}`
+								.clients__post Your Marketing Crew CEO
+
+			.clients__dots.js-clients-slider-dots
+

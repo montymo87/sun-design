@@ -53,7 +53,6 @@
 }
 
 @mixin text {
-	font-family: $font_1;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 300;
@@ -62,7 +61,6 @@
 }
 
 @mixin text-l {
-	font-family: $font_1;
 	font-size: 2rem;
 	font-style: normal;
 	font-weight: 300;
@@ -71,7 +69,6 @@
 }
 
 @mixin text-i {
-	font-family: $font_1;
 	font-size: 1.8rem;
 	font-style: italic;
 	font-weight: 400;
@@ -80,7 +77,6 @@
 }
 
 @mixin text-b {
-	font-family: $font_1;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 600;
@@ -89,7 +85,6 @@
 }
 
 @mixin text-s {
-	font-family: $font_1;
 	font-size: 1.4rem;
 	font-style: normal;
 	font-weight: 300;
