@@ -102,7 +102,9 @@
 }
 
 .contact__btn_w {
-	max-width: 28.8rem;
+	@include bp($point_6, min) {
+		max-width: 28.8rem;
+	}
 }
 
 .contact__btn {
