@@ -39,9 +39,17 @@
 
 .header__logo_w {
 	display: block;
-	width: 18rem;
-	height: 4rem;
+
 	margin-right: auto;
+
+	@include bp($point_2, min) {
+		width: 18rem;
+		height: 4rem;
+	}
+	@include bp($point_3) {
+		width: 12rem;
+		height: 3rem;
+	}
 }
 
 .header__nav_list {
