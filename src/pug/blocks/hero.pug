@@ -1,0 +1,16 @@
+section.hero
+	.hero__in
+		.hero__row
+			.hero__col.hero__col--info
+				.hero__info
+					h1.hero__title John Doe
+					.hero__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dolor magna risus sed. Et dictumst vel.
+					.hero__btn_w
+						a(href="#").hero__link.btn_base Free Seo Consulting Training
+			.hero__col.hero__col--img
+				+picture({
+					img: `main.png`,
+					class: 'hero__img_w',
+					img_class: 'hero__img',
+					alt: 'some image',
+				})

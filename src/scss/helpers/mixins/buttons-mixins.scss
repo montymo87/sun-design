@@ -77,11 +77,19 @@
 
 //size mixins:
 @mixin btn_size_normal {
-	height: 6rem;
-	padding: 0 2rem;
-
-	line-height: 6rem;
+	width: 100%;
+	padding: 0 3rem;
 	font-size: 1.6rem;
-
 	border-radius: 4rem;
+
+	@include bp($point_2, min) {
+		height: 6rem;
+
+		line-height: 6rem;
+	}
+	@include bp($point_3) {
+		height: 4rem;
+
+		line-height: 4rem;
+	}
 }

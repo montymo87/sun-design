@@ -9,12 +9,33 @@
 
 	--height-header: 10rem;
 	--height-footer: 10rem;
-	--gl-indent: 5rem;
+
+	@include bp($point_2, min) {
+		--gl-indent: 6rem;
+	}
+	@include bp($point_3) {
+		--gl-indent: 2rem;
+	}
 }
 
 html {
+	scroll-behavior: smooth;
 	height: 100%;
-	font: 400 calc(100vw / 1920 * 10) / 1.33 $font_1;
+	font-weight: 400;
+	line-height: 1.3;
+	font-family: $font_1;
+
+	@include bp(1921px, min) {
+		font-size: calc(100vw / 1920 * 10);
+	}
+
+	@include bp(1920px, $point_5) {
+		font-size: 10px;
+	}
+
+	@include bp($point_5 - 1) {
+		font-size: calc(100vw / 640 * 10);
+	}
 }
 
 body {
@@ -34,6 +55,12 @@ body {
 
 	@supports (display: grid) {
 		display: block;
+	}
+
+	&.body--popup_open,
+	&.body--search_open,
+	&.body--open_menu_state {
+		overflow: hidden;
 	}
 }
 

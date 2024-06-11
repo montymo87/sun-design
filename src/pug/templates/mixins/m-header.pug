@@ -1,2 +1,40 @@
+-
+	list = [
+		{
+			title: 'Home',
+		},
+		{
+			title: 'About',
+			sub: ['Submenu 1','Submenu 2','Submenu 3'],
+			},
+		{
+			title: 'Products',
+		},
+		{
+			title: 'Testimonials',
+		},
+		{
+			title: 'Contact',
+		},
+	]
+
+
 mixin header
-	header.header
+	header.header.js-header
+		.header__in
+			a(href="#").header__logo_w
+				img(src="images/logo.svg", alt="site logo")
+			nav.header__nav
+				ul.header__nav_list
+					each item in list
+						li.menu-item(class= item.sub ? 'menu-item-has-children' : '')
+							a(href="#")= item.title
+
+							if item.sub
+								ul.sub-menu
+									each subitem, index in item.sub
+										li.menu-item
+											a(href="#")= subitem
+
+			button.header__menu_trigger.js-header-menu-trigger(type="button" aria-label="Toggle menu")
+				span

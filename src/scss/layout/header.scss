@@ -9,9 +9,220 @@
 
 	font-size: 1rem;
 
+	background-color: $bg_4;
 	will-change: transform;
+	transition: background-color ease 0.4s, transform ease 0.3s;
 
 	@include z-index(header);
+
+	@include bp($point_2, min) {
+		padding: 3rem 7rem;
+	}
+	@include bp($point_3) {
+		padding: 3rem var(--gl-indent);
+	}
+
+	&.header--scroll_state {
+		background-color: rgba($white, 1);
+	}
+
+	&.header--pos_state {
+		transform: translateY(-100%);
+	}
 }
 
 //------------------------------------------------------------layout###
+
+.header__in {
+	@include flex_block(row, wrap, flex-start, center, center);
+}
+
+.header__logo_w {
+	display: block;
+	width: 18rem;
+	height: 4rem;
+	margin-right: auto;
+}
+
+.header__nav_list {
+	font-size: 1.6rem;
+	color: $dark_2;
+
+	a {
+		text-decoration: none;
+		color: $dark_2;
+		transition: color ease 0.3s;
+	}
+
+	a:hover {
+		color: $dark;
+	}
+
+	& > li {
+		position: relative;
+	}
+
+	li:hover ul {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	li {
+		& > a {
+			display: block;
+			padding: 1rem;
+			cursor: pointer;
+		}
+
+		ul {
+			padding: 1rem;
+			background-color: $white;
+
+			@include bp($point_2, min) {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				min-width: 13.8rem;
+				transform: translateX(-35%);
+				box-shadow: 0 4px 2rem 0 rgba(0, 0, 0, 0.05);
+				opacity: 0;
+				border-radius: 1.2rem;
+				border: solid 1px #e7e7e7;
+				pointer-events: none;
+				transition: opacity ease 0.3s;
+			}
+			@include bp($point_3) {
+				display: none;
+			}
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 3.1rem;
+				display: block;
+				width: 2.4rem;
+				height: 2.4rem;
+				background-color: $white;
+				transform: rotate(45deg);
+				content: '';
+				pointer-events: none;
+
+				@include bp($point_3) {
+					display: none;
+				}
+			}
+
+			a {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	@include bp($point_2, min) {
+		display: grid;
+		grid-template-columns: min-content;
+		grid-auto-flow: column;
+		gap: 3.3rem;
+		margin-right: -1rem;
+	}
+	@include bp($point_3) {
+		margin: auto;
+		height: auto;
+		background-color: $white;
+		text-align: center;
+	}
+}
+
+.menu-item {
+	&.menu_item--active {
+		& > a {
+			color: $dark;
+		}
+		.sub-menu {
+			display: block;
+		}
+	}
+}
+
+.header__nav {
+	@include bp($point_3) {
+		display: flex;
+		justify-content: center;
+		overflow-y: auto;
+		position: absolute;
+		width: 100%;
+		height: var(--full-screen);
+		top: 0;
+		left: 0;
+		background-color: $white;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity ease 0.4s;
+	}
+
+	.body--open_menu_state & {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.header__menu_trigger {
+	$burgerHeight: 2rem;
+
+	position: relative;
+	z-index: 5;
+
+	width: 3rem;
+	height: $burgerHeight;
+
+	cursor: pointer;
+
+	&::before,
+	&::after,
+	span {
+		position: absolute;
+		left: 0;
+		top: 50%;
+
+		width: 100%;
+		height: 1px;
+
+		transition: transform 0.3s ease;
+		will-change: transform;
+
+		background-color: $dark;
+	}
+
+	&::before {
+		content: '';
+		transform: translateY(calc($burgerHeight / 2 * -1));
+	}
+
+	&::after {
+		content: '';
+		transform: translateY(calc($burgerHeight / 2));
+	}
+
+	.body--open_menu_state & {
+		span {
+			transform: scale(0);
+		}
+
+		&::before {
+			transform: rotate(-45deg);
+		}
+
+		&::after {
+			transform: rotate(45deg);
+		}
+	}
+
+	@include bp($point_2, min) {
+		display: none;
+	}
+
+	@include bp($point_3) {
+		display: block;
+	}
+}
