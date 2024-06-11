@@ -1,0 +1,116 @@
+.contact {
+	background-color: $bg;
+	@include bp($point_2, min) {
+		padding-bottom: 12rem;
+		padding-top: 12rem;
+	}
+	@include bp($point_3) {
+		padding-bottom: 8rem;
+		padding-top: 8rem;
+	}
+}
+
+.contact__in {
+	max-width: 117rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.contact__row {
+	display: grid;
+	gap: 4rem;
+
+	@include bp($point_4, min) {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include bp($point_4 - 1) {
+	}
+}
+
+.contact__title {
+	@include h2;
+
+	strong {
+		color: $green;
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.contact__col {
+	&.contact__col--info {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}
+
+.contact__info {
+	margin-top: auto;
+}
+
+.contact__mail {
+	display: block;
+	font-size: 2rem;
+	line-height: 1.5;
+	color: $green;
+	text-decoration: underline;
+
+	&:not(:last-child) {
+		margin-bottom: 1.4rem;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.contact__address {
+	font-size: 2rem;
+	line-height: 1.5;
+}
+
+.contact__form_item {
+	&:not(:last-child) {
+		margin-bottom: 1.6rem;
+	}
+}
+
+.contact__form_textarea {
+	position: relative;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+
+	&:after {
+		position: absolute;
+		right: 4px;
+		bottom: 4px;
+		display: block;
+		width: 0.7rem;
+		height: 0.7rem;
+		content: '';
+		pointer-events: none;
+		background-repeat: none;
+		background-position: center;
+		background-size: 100%;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOCA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTcuNTEzNDMgMC43MzY4NDJMMS40NTkzOSA2LjYzMTU4TDAuNzAyNjM3IDUuODk0NzNMNi43NTY2NyAwTDcuNTEzNDMgMC43MzY4NDJaTTcuODkxODUgNC4wNTI2M0w0Ljg2NDg0IDdMNC4xMDgwOSA2LjI2MzE2TDcuMTM1MSAzLjMxNTc5TDcuODkxODUgNC4wNTI2M1oiIGZpbGw9IiMxQzFDMUMiLz4KPC9zdmc+Cg==);
+	}
+}
+
+.contact__btn_w {
+	max-width: 28.8rem;
+}
+
+.contact__btn {
+	span {
+		display: block;
+		width: 1.6rem;
+		height: 1.3rem;
+		margin-right: 4px;
+		transform: translateY(-1px);
+	}
+}

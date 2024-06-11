@@ -1,0 +1,38 @@
+section.section.contact
+	.contact__in
+		.contact__row
+			.contact__col.contact__col--info
+				h2.contact__title Get in Touch
+				.contact__info
+					a(href="mailto:hello@domainexample.com").contact__mail hello@domainexample.com
+					.contact__address 237 Haylee Islands Suite 960
+			.contact__col.contact__col--form
+				.contact__form_w
+					form(action='#', method='POST')
+						.contact__form_item
+							+form_input({
+								type: 'text',
+								placeholder: 'Name',
+								value: '',
+								id: 'input_1',
+							})
+						.contact__form_item
+							+form_input({
+								type: 'Email',
+								placeholder: 'its placeholder',
+								value: '',
+								id: 'input_2',
+							})
+						.contact__form_textarea
+							+form_textarea({
+								placeholder: 'its placeholder',
+								id: 'textarea_1',
+							})
+
+						.contact__btn_w
+							button(type="submit").btn_base.contact__btn
+								span
+									+icon('mail', 'icon--size_mod')
+								| Submit Message
+
+

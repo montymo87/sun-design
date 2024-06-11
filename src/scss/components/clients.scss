@@ -1,11 +1,11 @@
 .clients {
 	@include bp($point_2, min) {
 		padding-top: 6rem;
-		padding-bottom: 6rem;
+		padding-bottom: 12rem;
 	}
 	@include bp($point_3) {
 		padding-top: 3rem;
-		padding-bottom: 3rem;
+		padding-bottom: 6rem;
 	}
 }
 
