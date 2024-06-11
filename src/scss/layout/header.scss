@@ -19,7 +19,7 @@
 		padding: 3rem 7rem;
 	}
 	@include bp($point_3) {
-		padding: 3rem var(--gl-indent);
+		padding: 2rem var(--gl-indent);
 	}
 
 	&.header--scroll_state {

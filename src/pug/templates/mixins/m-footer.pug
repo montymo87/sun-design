@@ -1,2 +1,15 @@
+-
+	footer_list = ['Home','About','Products','Testimonials','Contact',]
+
 mixin footer
 	footer.footer
+		.footer__in
+			a(href="#" ).footer__logo_w
+				img(src="images/logo.svg", alt="site logo")
+			.footer__list_w
+				ul.footer__list
+					each item in footer_list
+						li.footer__list_item
+							a(href="#").footer__list_link= item
+
+			.footer__copyright Copyright © 2021 All right reserved

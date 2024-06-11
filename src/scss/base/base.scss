@@ -7,13 +7,14 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 10rem;
 	--height-footer: 10rem;
 
 	@include bp($point_2, min) {
+		--height-header: 10rem;
 		--gl-indent: 6rem;
 	}
 	@include bp($point_3) {
+		--height-header: 7rem;
 		--gl-indent: 2rem;
 	}
 }
