@@ -2,13 +2,17 @@
 	position: relative;
 	width: 100%;
 	font-size: 1rem;
-	padding-left: var(--gl-indent);
-	padding-right: var(--gl-indent);
 	background-color: $bg_4;
+
+	@include bp($point_4, min) {
+		padding-left: var(--gl-indent);
+		padding-right: var(--gl-indent);
+	}
 
 	@include bp($point_4 - 1) {
 		@include flex_block(row, wrap, center, center, center);
 		height: calc(var(--full-screen) - var(--height-header));
+		padding: 4rem var(--gl-indent);
 	}
 }
 
@@ -29,7 +33,9 @@
 .hero__col {
 	&.hero__col--info {
 		@include flex_block(row, wrap, flex-start, center, center);
-		padding: 4rem 0;
+		@include bp($point_4, min) {
+			padding: 4rem 0;
+		}
 	}
 
 	&.hero__col--img {
