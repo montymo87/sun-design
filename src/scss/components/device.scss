@@ -1,0 +1,105 @@
+.device {
+	@include bp($point_2, min) {
+		padding-top: 10rem;
+		padding-bottom: 6rem;
+	}
+
+	@include bp($point_3) {
+		padding-top: 6rem;
+		padding-bottom: 3rem;
+	}
+}
+
+.device__in {
+	max-width: 180rem;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $bg_2;
+	border-radius: 1rem;
+
+	@include bp($point_3) {
+		padding: 5rem var(--gl-indent);
+	}
+}
+
+.device__row {
+	@include bp($point_2, min) {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr;
+	}
+}
+
+.device__col {
+	&.device__col--info {
+		@include bp($point_2, min) {
+			@include flex_block(row, wrap, flex-start, center, center);
+			padding: 15.2rem min(10rem, 4vw);
+		}
+		@include bp($point_3) {
+			text-align: center;
+			max-width: 76rem;
+			margin: 0 auto;
+
+			&:not(:last-child) {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+	&.device__col--img {
+		position: relative;
+
+		@include bp($point_3) {
+			max-width: 60rem;
+			width: 100%;
+			margin: auto;
+		}
+	}
+}
+
+.device__info {
+}
+
+.device__img_w {
+	// position: relative;
+
+	display: block;
+	width: 100%;
+
+	@include bp($point_2, min) {
+		position: absolute;
+		z-index: 1;
+		height: 100%;
+	}
+	@include bp($point_3) {
+		position: relative;
+		padding-bottom: 60%;
+	}
+
+	img {
+		@include bp($point_2, min) {
+			@include cover_img;
+		}
+		@include bp($point_3) {
+			@include contain_img;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.device__title {
+	@include h3;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.device__descr {
+	@include text;
+
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}

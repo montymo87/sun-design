@@ -1,25 +1,43 @@
 @mixin h1 {
-	font-size: 9rem;
 	font-weight: 400;
 	font-family: $font_2;
 	letter-spacing: 0.04em;
 	line-height: 1.177;
+
+	@include bp($point_2, min) {
+		font-size: 9rem;
+	}
+	@include bp($point_3) {
+		font-size: 4.5rem;
+	}
 }
 
 @mixin h2 {
-	font-size: 7rem;
 	font-weight: 400;
 	font-family: $font_2;
 	letter-spacing: 0.04em;
 	line-height: 1.171;
+
+	@include bp($point_2, min) {
+		font-size: 7rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.5rem;
+	}
 }
 
 @mixin h3 {
-	font-size: 7rem;
 	font-weight: 400;
 	font-family: $font_2;
 	letter-spacing: 0.04em;
 	line-height: 1.171;
+
+	@include bp($point_2, min) {
+		font-size: 6rem;
+	}
+	@include bp($point_3) {
+		font-size: 3.5rem;
+	}
 }
 
 @mixin h4 {
@@ -35,7 +53,6 @@
 }
 
 @mixin text {
-	font-family: $font_1;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 300;
@@ -43,8 +60,15 @@
 	letter-spacing: 0em;
 }
 
+@mixin text-l {
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 1.5;
+	letter-spacing: 0em;
+}
+
 @mixin text-i {
-	font-family: $font_1;
 	font-size: 1.8rem;
 	font-style: italic;
 	font-weight: 400;
@@ -53,7 +77,6 @@
 }
 
 @mixin text-b {
-	font-family: $font_1;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 600;
@@ -62,7 +85,6 @@
 }
 
 @mixin text-s {
-	font-family: $font_1;
 	font-size: 1.4rem;
 	font-style: normal;
 	font-weight: 300;
