@@ -1,3 +1,5 @@
+## Password to all WordPress file sun-design its for all DB, Dashboard etc. 
+
 # Welcome to glivera-webpack-boilerplate
 
 ## Get started
