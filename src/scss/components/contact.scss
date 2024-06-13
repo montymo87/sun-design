@@ -52,7 +52,7 @@
 }
 
 .contact__mail {
-	display: block;
+	display: inline-block;
 	font-size: 2rem;
 	line-height: 1.5;
 	color: $green;
@@ -114,5 +114,9 @@
 		height: 1.3rem;
 		margin-right: 4px;
 		transform: translateY(-1px);
+		background-repeat: none;
+		background-position: center;
+		background-size: 100%;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTggMTQiIGZpbGw9IndoaXRlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTAuODE4MTc2IDEuODUyNjdMOC4zOTYwMyA4LjU4ODU0QzguNzQwNDcgOC44OTQ3MiA5LjI1OTUyIDguODk0NzIgOS42MDM5NiA4LjU4ODU0TDE3LjE4MTggMS44NTI2N1YxMi40NTQ1QzE3LjE4MTggMTIuOTU2NiAxNi43NzQ4IDEzLjM2MzYgMTYuMjcyNyAxMy4zNjM2SDEuNzI3MjdDMS4yMjUxOSAxMy4zNjM2IDAuODE4MTc2IDEyLjk1NjYgMC44MTgxNzYgMTIuNDU0NVYxLjg1MjY3Wk0yLjE4NjUgMC42MzYzNTNIMTUuODEzNEw4Ljk5OTk1IDYuNjkyNzZMMi4xODY1IDAuNjM2MzUzWiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==);
 	}
 }
