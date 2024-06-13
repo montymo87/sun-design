@@ -51,22 +51,22 @@
 	@include flex_block(row, wrap, center, center, center);
 
 	margin: 0 -5.3rem -2rem 0;
-}
 
-.footer__list_item {
-	padding: 0 5.3rem 2rem 0;
-}
+	li {
+		padding: 0 5.3rem 2rem 0;
+	}
 
-.footer__list_link {
-	line-height: 1.2;
-	font-size: 1.6rem;
-	font-weight: 300;
-	color: $dark;
-	transition: color ease 0.3s;
+	a {
+		line-height: 1.2;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: $dark;
+		transition: color ease 0.3s;
 
-	&:hover {
-		color: $green;
-		text-decoration: none;
+		&:hover {
+			color: $green;
+			text-decoration: none;
+		}
 	}
 }
 
