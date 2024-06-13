@@ -6,4 +6,70 @@
 	font-size: 1rem;
 
 	will-change: transform;
+
+	@include bp($point_2, min) {
+		padding: 10rem var(--gl-indent);
+	}
+	@include bp($point_3) {
+		padding: 6rem var(--gl-indent);
+	}
+}
+
+.footer__in {
+	@include flex_block(column, nowrap, center, center, center);
+	max-width: 117rem;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.footer__logo_w {
+	display: block;
+	width: 29rem;
+	height: 6.5rem;
+
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+
+	@include bp($point_2, min) {
+		width: 29rem;
+		height: 6.5rem;
+	}
+	@include bp($point_3) {
+		width: 20rem;
+		height: 4.5rem;
+	}
+}
+
+.footer__list_w {
+	&:not(:last-child) {
+		margin-bottom: 4rem;
+	}
+}
+
+.footer__list {
+	@include flex_block(row, wrap, center, center, center);
+
+	margin: 0 -5.3rem -2rem 0;
+
+	li {
+		padding: 0 5.3rem 2rem 0;
+	}
+
+	a {
+		line-height: 1.2;
+		font-size: 1.6rem;
+		font-weight: 300;
+		color: $dark;
+		transition: color ease 0.3s;
+
+		&:hover {
+			color: $green;
+			text-decoration: none;
+		}
+	}
+}
+
+.footer__copyright {
+	@include text-s;
 }
