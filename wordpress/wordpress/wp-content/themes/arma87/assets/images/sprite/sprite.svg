@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style>
+    .sprite-symbol-usage {display: none;}
+    .sprite-symbol-usage:target {display: inline;}
+  </style><symbol viewBox="0 0 20 9.69" fill="currentcolor" id="arrow"><path d="M.23 4.29 4.31.23a.78.78 0 1 1 1.1 1.1L2.67 4.06h16.55a.78.78 0 1 1 0 1.56H2.67l2.74 2.73a.79.79 0 0 1 0 1.11.8.8 0 0 1-1.11 0L.23 5.4a.78.78 0 0 1 0-1.11Z" /></symbol><symbol viewBox="0 0 18 14" fill="currentcolor" id="mail"><path fill-rule="evenodd" clip-rule="evenodd" d="m.818 1.853 7.578 6.736a.91.91 0 0 0 1.208 0l7.578-6.736v10.601a.91.91 0 0 1-.91.91H1.728a.91.91 0 0 1-.909-.91V1.853ZM2.187.636h13.626L9 6.693 2.187.636Z" /></symbol></defs><use id="arrow-usage" xlink:href="#arrow" class="sprite-symbol-usage" /><use id="mail-usage" xlink:href="#mail" class="sprite-symbol-usage" /></svg>
