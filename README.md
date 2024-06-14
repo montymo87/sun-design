@@ -1,10 +1,10 @@
-## Password to all WordPress file sun-design its for all DB, Dashboard etc. 
+# Password to all WordPress file sun-design its for all DB, Dashboard etc.
 
 # Welcome to glivera-webpack-boilerplate
 
 ## Get started
 
-1. Install [node.js](https://nodejs.org/)
+1. Install [node.js](https://nodejs.org/) max 14v
 
 2. Install npm packages
 
